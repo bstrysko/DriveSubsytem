@@ -7,7 +7,7 @@ F_CPU=8000000
 
 FLAGS=-mmcu=$(MCU) -DF_CPU=$(F_CPU)UL -Os -Wall -Wl,--section-start=.data=0x800174 -I/usr/include/ -I./include/ -L/usr/lib/AVRI2CBootloader/ -lAVRI2CBootloaderAVR -Wl,-u,tag_TWI
 
-SRC= main.c
+SRC= src/Motors.c main.c
 HDR=
 
 all: $(NAME).hex

@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <util/delay.h>
 
+#include <Motors.h>
+
 #include "../libMaster/include/DriveSubsystemRegisters.h"
 
 /*
@@ -18,9 +20,11 @@ int main()
 {
   I2CCallbacks.onReadFunction = onI2CRead;
   I2CCallbacks.onWriteFunction = onI2CWrite;
-  
+
   sei();
-  
+
+  motorsInit();
+
   while(true);
 
   return 0;
