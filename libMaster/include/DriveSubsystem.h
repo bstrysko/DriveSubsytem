@@ -3,10 +3,9 @@
 
 #include <AVRI2CBootloader/I2CDeviceBootable.h>
 
-#include <stdint.h>
+#include "DriveSubsystemRegisters.h"
 
-#define DRIVE_SUBSYSTEM_REGISTER_POSITION 0x10
-#define DRIVE_SUBSYSTEM_REGISTER_ANGLE 0x11
+#include <stdint.h>
 
 class DriveSubsystem : public I2CDeviceBootable
 {
